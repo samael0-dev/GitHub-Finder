@@ -93,12 +93,12 @@ async function repoMaker() {
         repoObject.forEach(async (element,index) => {
         if(index<=8) {
             if((index)%2==0) {
-                await repositorycard.insertAdjacentHTML("afterend",`<div class="h-[150px] max-md:mr-5 col-span-1 rounded-3xl shadow-[-1px_3px_13px_10px_rgba(0,_0,_0,_0.1)] bg-gray-100 ml-4 mb-3"><div class="flex flex-col"><span class="ml-4 mt-3 text-blue-500 text-[20px] font-bold">${await element.name}</span><div class="ml-4">${await element.description}</div><div class="ml-4 mt-2">${await language(element)}</div></div></div>`);
+                await repositorycard.insertAdjacentHTML("afterend",`<div class="h-[150px] max-md:mr-5 col-span-1 rounded-3xl shadow-[-1px_3px_13px_10px_rgba(0,_0,_0,_0.1)] bg-gray-100 ml-4 mb-3"><div class="flex flex-col"><span class="ml-4 mt-3 text-blue-500 text-[20px] font-bold">${await element.name}</span><div class="ml-4">→${await element.description}</div><div class="ml-4 mt-2 font-bold">🟢${await language(element)}</div></div></div>`);
 
             }
 
             else if((index)%2!=0) {
-                await repositorycard.insertAdjacentHTML("afterend",`<div class="h-[150px] max-md:ml-3 col-span-1 rounded-3xl shadow-[-1px_3px_13px_10px_rgba(0,_0,_0,_0.1)] bg-gray-100 mr-4 mb-3"><div class="flex flex-col"><span class="ml-4 mt-3 text-blue-500 text-[20px] font-bold">${await element.name}</span><div class="ml-4">${await element.description}</div><div class="ml-4 mt-2">${await language(element)}</div></div></div>`);
+                await repositorycard.insertAdjacentHTML("afterend",`<div class="h-[150px] max-md:ml-3 col-span-1 rounded-3xl shadow-[-1px_3px_13px_10px_rgba(0,_0,_0,_0.1)] bg-gray-100 mr-4 mb-3"><div class="flex flex-col"><span class="ml-4 mt-3 text-blue-500 text-[20px] font-bold">${await element.name}</span><div class="ml-4">→${await element.description}</div><div class="ml-4 mt-2 font-bold">🟢${await language(element)}</div></div></div>`);
             }
         }
         });
